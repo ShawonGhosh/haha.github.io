@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.logomyway.com/logos_new/7498/sg_copy_510551004635.png">
+    <title>Study Plan</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+    .container{
+        width:94%;
+    }
+    .a{
+            display: inline;
+            position: relative;
+            padding-top:25px;
+        }
+        .cum input{
+            border:0px solid #ddd;
+            border-bottom:2px solid black;
+            appearance:none;
+            padding:10px 10px 3px 10px;
+            background:#FFFFFF;
+            outline: none;
+            width:250px;
+            transition: border-color 1s ease;
+        }
+        .place{
+            position: absolute;
+            left:12px;
+            color:#aaa;
+            top:50%;
+            transition: top 0.3s ease,
+                        color 0.3s ease,
+                        font-size 0.3s ease;
+            transition-delay: background 1s;
+        }
+        .cum input:valid +.place,
+        .cum input:focus + .place{
+            top:15%;
+            color:#222;
+            font-size: 12px;
+            background:#fff;
+            padding:0px 5px 0px 5px;
+        }
+    
+        
+        
+        .cum input:valid,
+        .cum input:focus{
+            border-color: black;
+        }
+        
+        .cum input ~ .focus{
+        position:absolute;
+        bottom: -7.8px;
+        left:50%;
+        width:0;
+        height: 2px;
+        background-color: red;
+        transition: 0.3s;
+        
+    }
+    .cum input:focus ~ .focus{
+        width:100%;
+        left: 0;
+        transition: 0.3s;
+    }
+    .card{
+        border-radius: 10px;
+        box-shadow:-1px 0px 10px -1px;
+    }
+    .img{
+        background:url('https://wallpapercave.com/wp/wp3191239.jpg');
+        background-size:100% 100%;
+    }
+    input[type="radio"] {
+  display: none;
+}
+    .lab label {
+  position: relative;
+  cursor: pointer;
+  font-weight: bold;
+  padding-right: 15px;
+}
+    .lab label::before {
+  content: "";
+  border: 2px solid #222;
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  margin: -4px 7px;
+  margin-left: 0;
+  border-radius: 50%;
+}
+    .lab label::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  background: rgba(34, 34, 34, 0);
+  left: 4px;
+  top: 12px;
+  margin: -6px 0px;
+  margin-left: 0;
+  border-radius: 50%;
+
+  transition: all 0.4s;
+}
+.lab input[type="radio"]:checked + label::after {
+  background: rgba(34, 34, 34, 1);
+}
+
+
+    
+    </style>
+<body>
+ <!--*/***////*/*/*/*/*/*/*/*/*/*/*/*/*/**/*/*/*/*/*/*/*/*/
+  */*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/**/-->
+   <div class="fixed-bottom text-right mr-4">
+
+<div><p id="plz" style=" ">Time Remains : <br>( 15:00 )</p></div>
+    
+    
+    <script type="text/javascript">
+        var a=15;
+        var time=a*60;
+        var dd=document.getElementById('plz');
+        dd.setAttribute("style","color:yellow;background-color:black;text-align:center;display: inline-block;font-size: 13px;padding:0px 20px 0px 20px;border-radius: 50px;");
+        setInterval(timeing1,1000);
+        function timeing1(){
+            time=time-1;
+            var minuts=Math.floor(time / 60);
+            var seconds=Math.abs(time % 60);
+            if(seconds < 10){
+                seconds="0" + seconds;
+            }
+            dd.innerHTML="Time Remains :" +"<br>"+"(" + minuts+":"+seconds + ")";
+            if(minuts < 0){var extra=Math.abs(minuts+1);
+             dd.setAttribute("style","color:red;background-color:black;text-align:center;display: inline-block;font-size: 13px;padding:0px 20px 0px 20px;");
+            dd.innerHTML="Time Over :" + "<br>" +"("+ extra+":"+seconds + ")";
+            };
+        };
+    </script>
+
+    </div>
+    <!--*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/**/**/
+    */*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/-->
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <img src="">
+        </div>
+    </div>
+ 
+    <div class="row justify-content-center mt-3">
+        <div class="col-12">
+            <div class="card img">
+                <div class="card-body">
+                    <h3 class="card-title">Study plan</h3>
+                    <p class="card-text">বাংলা ব্যাকরণ-02
+</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//////////////////////////////////////////////
+    /////////////////////////////////////////////////-->
+    <form method="get" name="quiz" id="quiz">
+    <div class="row justify-content-center mt-2">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text">Name (Facebook I'd name)*</p>
+                    <div class="a">
+                        <label class="cum">
+                            <input type="text" name="name" required id="inputFunction">
+                            <span class="place">Enter Name</span>
+                            <div class="focus"></div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-2">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text">Your Email (Valid)*</p>
+                    <div class="a">
+                        <label class="cum">
+                            <input type="text" name="email" required>
+                            <span class="place">Enter Email</span>
+                            <div class="focus"></div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    <!--////////////////////////////////////////////
+    ///////////////////////////////////////////////-->
+      <div class="">
+        <div class="row justify-content-center mt-2">
+            <div class="col-12">
+                <div class="card">   
+                <div id="hq1">
+                   <div class="card-body lab">
+                    <h5 class="card-titel pb-2">সন্ধির নিয়মে নিচের কোনটি সঠিক ?</h5>
+                       <p><input type="radio" id="l1a" name="q1" value="wrong"><label for="l1a">  A.</label><span>  শির + ছদ = শিরচ্ছেদ</span> </p>
+                       <p><input type="radio" name="q1" value="right" id="l1b">     <label for="l1b">  B.</label><span id="right1">  শিরঃ + ছেদ = শিরশ্ছেদ</span> </p>
+                    <p><input type="radio" name="q1" value="wrong" id="l1c">        <label for="l1c">  C.</label><span>  শিরঃ + ছেদ = শিরচ্ছেদ</span> </p>
+                    <p><input type="radio" name="q1" value="wrong" id="l1d">        <label for="l1d">  D.</label><span>  শিরো + ছেদ = শিরোচ্ছেদ</span></p>
+                    </div>
+                </div>
+                    
+                    <button class="btn btn-dark" type="button" onclick="allclear('q1');">Reset</button> 
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-2">
+            <div class="col-12">
+                <div class="card">
+                  <div id="hq2">
+                   <div class="card-body lab">
+                    <h5 class="card-titel pb-2">নিচের কোন বানানটি শুদ্ধ নয় ?</h5>
+                    <p><input type="radio" id="l2a" name="q2" value="wrong" ><label for="l2a">               A.</label><span>  সমীচীন</span> </p>
+                    <p><input type="radio" id="l2b" name="q2" value="wrong"><label for="l2b">  B.</label><span>  সান্তনা</span> </p>
+                    <p><input type="radio" id="l2c" name="q2" value="wrong"><label for="l2c">  C.</label><span>  মুমূর্ষ</span> </p>
+                    <p><input type="radio" id="l2d" name="q2" value="right"><label for="l2d">  D.</label><span id="right2">  ফটোষ্ট্যাট</span> </p>
+                    </div>
+                    </div>
+                    <button class="btn btn-dark" type="button" onclick="allclear('q2');">Reset</button>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-2">
+            <div class="col-12">
+                <div class="card">
+                  <div id="hq3">
+                   <div class="card-body lab">
+                    <h5 class="card-titel pb-2">নিচের কোনটি নিপাতনে সিদ্ধ ব্যঞ্জন সন্ধি ?</h5>
+                    <p><input type="radio" id="l3a" name="q3" value="wrong" ><label for="l3a">               A.</label><span>  কুলটা
+                    </span> </p>
+                    <p><input type="radio" id="l3b" name="q3" value="right"><label for="l3b">  B.</label><span id="right3">  ষোড়শ</span> </p>
+                    <p><input type="radio" id="l3c" name="q3" value="wrong"><label for="l3c">  C.</label><span>  অন্যান্</span> </p>
+                    <p><input type="radio" id="l3d" name="q3" value="wrong"><label for="l3d">  D.</label><span>  গবাক্ষ</span> </p>
+                    </div>
+                    </div>
+                    <button class="btn btn-dark" type="button" onclick="allclear('q3');">Reset</button>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-2">
+            <div class="col-12">
+                <div class="card">
+                  <div id="hq4">
+                   <div class="card-body lab">
+                    <h5 class="card-titel pb-2">নিচের কোনটি স্বভাবতই মূর্ধন্য-ষ নয় ?</h5>
+                    <p><input type="radio" id="l4a" name="q4" value="wrong" ><label for="l4a">  A.</label><span>  অভিলাষ</span> </p>
+                    
+                    <p><input type="radio" id="l4b" name="q4" value="wrong"><label for="l4b">  B.</label><span>  প্রত্যুষ</span> </p>
+                    
+                    <p><input type="radio" id="l4c" name="q4" value="right"><label for="l4c">  C.</label><span id="right4">  কৃষ্ণ</span> </p>
+                    
+                    <p><input type="radio" id="l4d" name="q4" value="wrong"><label for="l4d">  D.</label><span>  রোষ</span> </p>
+                    </div>
+                    </div>
+                    <button class="btn btn-dark" type="button" onclick="allclear('q4');">Reset</button>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-2">
+            <div class="col-12">
+                <div class="card">
+                  <div id="hq5">
+                   <div class="card-body lab">
+                    <h5 class="card-titel pb-2">’ ব্যর্থ ’ এর সন্ধি বিচ্ছেদ কোনটি ?</h5>
+                    <p><input type="radio" id="l5a" name="q5" value="right" ><label for="l5a">               A.</label><span id="right5">  বি+অর্থ</span> </p>
+                    <p><input type="radio" id="l5b" name="q5" value="wrong"><label for="l5b">  B.</label><span>  ব্যঃ+থ</span> </p>
+                    <p><input type="radio" id="l5c" name="q5" value="wrong"><label for="l5c">  C.</label><span>  ব্যা+থ</span> </p>
+                    <p><input type="radio" id="l5d" name="q5" value="wrong"><label for="l5d">  D.</label><span>  ব+অর্থ</span> </p>
+                    </div>
+                    </div>
+                    <button class="btn btn-dark" type="button" onclick="allclear('q5');">Reset</button>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-2">
+            <div class="col-12">
+                <div class="card">
+                  <div id="hq6">
+                   <div class="card-body lab">
+                    <h5 class="card-titel pb-2">কোনটি শুদ্ধ বানান ?</h5>
+                    <p><input type="radio" id="l6a" name="q6" value="wrong" ><label for="l6a">  A.</label><span>  দূশন</span> </p>
+                    <p><input type="radio" id="l6b" name="q6" value="wrong"><label for="l6b">  B.</label><span>  দুষন</span> </p>
+                    <p><input type="radio" id="l6c" name="q6" value="wrong"><label for="l6c">  C.</label><span>  দুষণ</span> </p>
+                    <p><input type="radio" id="l6d" name="q6" value="right"><label for="l6d">  D.</label><span id="right6">  দূষণ</span> </p>
+                    </div>
+                    </div>
+                    <button class="btn btn-dark" type="button" onclick="allclear('q6');">Reset</button>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-2">
+            <div class="col-12">
+                <div class="card">
+                  <div id="hq7">
+                   <div class="card-body lab">
+                    <h5 class="card-titel pb-2">‘বনৌষধি’ শব্দটির সঠিক সন্ধি বিচ্ছেদ কোনটি ?</h5>
+                    <p><input type="radio" id="l7a" name="q7" value="wrong" ><label for="l7a">               A.</label><span>  বন+ঔষধ</span> </p>
+                    <p><input type="radio" id="l7b" name="q7" value="wrong"><label for="l7b">  B.</label><span>  বন+ওষোধি</span> </p>
+                    <p><input type="radio" id="l7c" name="q7" value="right"><label for="l7c">  C.</label><span id="right7">  বন+ওষধি</span> </p>
+                    <p><input type="radio" id="l7d" name="q7" value="wrong"><label for="l7d">  D.</label><span>  বন+ঔষধি</span> </p>
+                    </div>
+                    </div>
+                    <button class="btn btn-dark" type="button" onclick="allclear('q7');">Reset</button>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-2">
+            <div class="col-12">
+                <div class="card">
+                  <div id="hq8">
+                   <div class="card-body lab">
+                    <h5 class="card-titel pb-2">নিচের কোনটি স্বভাবতই মূর্ধন্য-ণ হয় ?</h5>
+                    <p><input type="radio" id="l8a" name="q8" value="right" ><label for="l8a">  A.</label><span id="right8">  নিপুণ</span> </p>
+                    <p><input type="radio" id="l8b" name="q8" value="wrong"><label for="l8b">  B.</label><span>  শ্রাবণ</span> </p>
+                    <p><input type="radio" id="l8c" name="q8" value="wrong"><label for="l8c">  C.</label><span>  নির্ণয়</span> </p>
+                    <p><input type="radio" id="l8d" name="q8" value="wrong"><label for="l8d">  D.</label><span>  রামায়ণ</span> </p>
+                    </div>
+                    </div>
+                    <button class="btn btn-dark" type="button" onclick="allclear('q8');">Reset</button>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-2">
+            <div class="col-12">
+                <div class="card">
+                  <div id="hq9">
+                   <div class="card-body lab">
+                    <h5 class="card-titel pb-2">‘নাব্য’ শব্দটির সঠিক সন্ধি বিচ্ছেদ কোনটি ?</h5>
+                    <p><input type="radio" id="l9a" name="q9" value="wrong" ><label for="l9a">               A.</label><span>  না+ব্য়</span> </p>
+                    
+                    <p><input type="radio" id="l9b" name="q9" value="right"><label for="l9b">  B.</label><span id="right9">  নৌ+য
+                    </span> </p>
+                    
+                    <p><input type="radio" id="l9c" name="q9" value="wrong"><label for="l9c">  C.</label><span>  ন+অব্য়</span> </p>
+                    
+                    <p><input type="radio" id="l9d" name="q9" value="wrong"><label for="l9d">  D.</label><span>  নি+অব্য়</span> </p>
+                    </div>
+                    </div>
+                    <button class="btn btn-dark" type="button" onclick="allclear('q9');">Reset</button>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-2">
+            <div class="col-12">
+                <div class="card">
+                  <div id="hq10">
+                   <div class="card-body lab">
+                    <h5 class="card-titel pb-2">কোন দুটি বর্ণের পর  ‘ণ’ ও ’ষ’  হয় ?</h5>
+                    <p><input type="radio" id="l10a" name="q10" value="wrong" ><label for="l10a">  A.</label><span>  ট,ঠ</span> </p>
+                    <p><input type="radio" id="l10b" name="q10" value="wrong"><label for="l10b">  B.</label><span>  ত,থ</span> </p>
+                    <p><input type="radio" id="l10c" name="q10" value="right"><label for="l10c">  C.</label><span id="right10">  ঋ,র</span> </p>
+                    <p><input type="radio" id="l10d" name="q10" value="wrong"><label for="l10d">  D.</label><span>  ই,উ</span> </p>
+                    </div>
+                    </div>
+                    <button class="btn btn-dark" type="button" onclick="allclear('q10');">Reset</button>
+                </div>
+            </div>
+          </div>
+          <div class="row justify-content-center mt-2">
+            <div class="col-12">
+                <div class="card">
+                  <div id="hq11">
+                   <div class="card-body lab">
+                    <h5 class="card-titel pb-2">‘মোড়ক’ শব্দটির সঠিক সন্ধি বিচ্ছেদ কোনট ?</h5>
+                    <p><input type="radio" id="l11a" name="q11" value="right" ><label for="l11a">  A.</label><span id="right11">  মুড়্+অক</span> </p>
+                    
+                    <p><input type="radio" id="l11b" name="q11" value="wrong"><label for="l11b">  B.</label><span>  মোড়+অক</span> </p>
+                    
+                    <p><input type="radio" id="l11c" name="q11" value="wrong"><label for="l11c">  C.</label><span>  মোড়+ক</span> </p>
+                    
+                    <p><input type="radio" id="l11d" name="q11" value="wrong"><label for="l11d">  D.</label><span>  মোর+ক</span> </p>
+                    
+                    </div>
+                    </div>
+                    <button class="btn btn-dark" type="button" onclick="allclear('q11');">Reset</button>
+                </div>
+            </div>
+          </div>
+          <div class="row justify-content-center mt-2">
+            <div class="col-12">
+                <div class="card">
+                  <div id="hq12">
+                   <div class="card-body lab">
+                    <h5 class="card-titel pb-2">নিচের কোনটি শুদ্ধ বানান ?</h5>
+                    <p><input type="radio" id="l12a" name="q12" value="wrong" ><label for="l12a">  A.</label><span>  মুর্ধন্য</span> </p>
+                    <p><input type="radio" id="l12b" name="q12" value="wrong"><label for="l12b">  B.</label><span>  মূর্ধণ</span> </p>
+                    <p><input type="radio" id="l12c" name="q12" value="right"><label for="l12c">  C.</label><span id="right12">  মূর্ধন্য</span> </p>
+                    <p><input type="radio" id="l12d" name="q12" value="wrong"><label for="l12d">  D.</label><span>  মুর্ধণ্য</span> </p>
+                    </div>
+                    </div>
+                    <button class="btn btn-dark" type="button" onclick="allclear('q12');">Reset</button>
+                </div>
+            </div>
+          </div>
+          <div class="row justify-content-center mt-2">
+            <div class="col-12">
+                <div class="card">
+                  <div id="hq13">
+                   <div class="card-body lab">
+                    <h5 class="card-titel pb-2">‘স্বাধীন’ শব্দটির সন্ধি বিচ্ছেদ কোনটি ?</h5>
+                    <p><input type="radio" id="l13a" name="q13" value="wrong" ><label for="l13a"> A.</label><span>  স+অধিন</span> </p>
+                    <p><input type="radio" id="l13b" name="q13" value="wrong"><label for="l13b">  B.</label><span>  শ+অধিন</span> </p>
+                    <p><input type="radio" id="l13c" name="q13" value="wrong"><label for="l13c">  C.</label><span >  স্ব+অধিন</span> </p>
+                    <p><input type="radio" id="l13d" name="q13" value="right"><label for="l13d">  D.</label><span id="right13">  স্ব+অধীন</span> </p>
+                    </div>
+                    </div>
+                    <button class="btn btn-dark" type="button" onclick="allclear('q13');">Reset</button>
+                </div>
+            </div>
+          </div>
+          <div class="row justify-content-center mt-2">
+            <div class="col-12">
+                <div class="card">
+                  <div id="hq14">
+                   <div class="card-body lab">
+                    <h5 class="card-titel pb-2">ণ-ত্ব বিধি অনুসারে 'ণ' হয়েছে নিচের কোন শব্দে ?</h5>
+                    <p><input type="radio" id="l14a" name="q14" value="wrong" ><label for="l14a">  A.</label><span>  লাবণ্য</span> </p>
+                    <p><input type="radio" id="l14b" name="q14" value="wrong"><label for="l14b">  B.</label><span>  পাণি</span> </p>
+                    <p><input type="radio" id="l14c" name="q14" value="right"><label for="l14c">  C.</label><span id="right14">  কৃপণ</span> </p>
+                    <p><input type="radio" id="l14d" name="q14" value="wrong"><label for="l14d">  D.</label><span>  বাণিজ্য</span> </p>
+                    </div>
+                    </div>
+                    <button class="btn btn-dark" type="button" onclick="allclear('q14');">Reset</button>
+                </div>
+            </div>
+          </div>
+          <div class="row justify-content-center mt-2">
+            <div class="col-12">
+                <div class="card">
+                  <div id="hq15">
+                   <div class="card-body lab">
+                    <h5 class="card-titel pb-2">'গিরীশ' এর সন্ধি বিচ্ছেদ কোনটি ?</h5>
+                    <p><input type="radio" id="l15a" name="q15" value="wrong" ><label for="l15a"> A.</label><span>  গিঃ + রিশ</span> </p>
+                    
+                    <p><input type="radio" id="l15b" name="q15" value="right"><label for="l15b">  B.</label><span id="right15">  গিরি + ঈশ</span> </p>
+                    
+                    <p><input type="radio" id="l15c" name="q15" value="wrong"><label for="l15c">  C.</label><span >  গিরী + ইশ</span> </p>
+                    
+                    <p><input type="radio" id="l15d" name="q15" value="wrong"><label for="l15d">  D.</label><span>  গিরী + ইশ</span> </p>
+                    
+                    </div>
+                    </div>
+                    <button class="btn btn-dark" type="button" onclick="allclear('q15');">Reset</button>
+                </div>
+            </div>
+          </div>
+
+
+ 
+
+
+        
+        
+        
+        
+        <div class="col-1 text-center pt-3">
+        <input class="btn btn-danger" type="submit" name="" value="done">
+        </div>
+        <div class="row justify-content-center pt-3">
+            <div class="col-9">
+                <p>Never submit passwords through This Forms.</p>
+            </div>
+        </div>
+        <div class="row justify-content-center pt-3">
+            <div class="col-12 text-center">
+                <p>Copyright © 2021  Designed by:<a href="https://www.facebook.com/profile.php?id=100008195567622" class="text-danger"> Shawon Ghosh</a></p>
+            </div>
+        </div>
+        </div>
+        <!--<button type="submit" onclick="check()">Submit</button>-->
+        
+    </form>
+    </div>
+    
+    
+    
+    <script type="text/javascript">
+        var abc;
+        var bac;
+        var mark=0;
+        var corcor1="";
+        var corcor2="";
+        var corcor3="";
+        var corcor4="";
+        var corcor5="";
+        var corcor6="";
+        var corcor7="";
+        var corcor8="";
+        var corcor9="";
+        var corcor10="";
+        var corcor11="";
+        var corcor12="";
+        var corcor13="";
+        var corcor14="";
+        var corcor15="";
+        
+        var try1=document.getElementById('hq1').innerHTML;
+        var try2=document.getElementById('hq2').innerHTML;
+        var try3=document.getElementById('hq3').innerHTML;
+        var try4=document.getElementById('hq4').innerHTML;
+        var try5=document.getElementById('hq5').innerHTML;
+        var try6=document.getElementById('hq6').innerHTML;
+        var try7=document.getElementById('hq7').innerHTML;
+        var try8=document.getElementById('hq8').innerHTML;
+        var try9=document.getElementById('hq9').innerHTML;
+        var try10=document.getElementById('hq10').innerHTML;
+        var try11=document.getElementById('hq11').innerHTML;
+        var try12=document.getElementById('hq12').innerHTML;
+        var try13=document.getElementById('hq13').innerHTML;
+        var try14=document.getElementById('hq14').innerHTML;
+        var try15=document.getElementById('hq15').innerHTML;
+        
+        
+        
+        
+        
+        function allclear(name){
+            const radioBtns = document.querySelectorAll("input[type='radio'][name='"+name+"']");
+            radioBtns.forEach(radioBtn => {
+                if(radioBtn.checked===true)
+                    radioBtn.checked=false;
+            })
+        };
+        
+        
+        
+        
+        var form=document.getElementById('quiz');
+        
+        
+        
+        
+        form.addEventListener('submit',(z) => {
+                abc=document.getElementById('quiz').name.value;
+                bac=document.getElementById('quiz').email.value;
+                if(abc === '' || abc==null || bac ==='' || bac==null){
+                    z.preventDefault();
+                }else{var qus1=document.getElementById('quiz').q1.value;
+            var qus2=document.getElementById('quiz').q2.value;
+            var qus3=document.getElementById('quiz').q3.value;
+            var qus4=document.getElementById('quiz').q4.value;
+            var qus5=document.getElementById('quiz').q5.value;
+            var qus6=document.getElementById('quiz').q6.value;
+            var qus7=document.getElementById('quiz').q7.value;
+            var qus8=document.getElementById('quiz').q8.value;
+            var qus9=document.getElementById('quiz').q9.value;
+            var qus10=document.getElementById('quiz').q10.value;
+            var qus11=document.getElementById('quiz').q11.value;      
+            var qus12=document.getElementById('quiz').q12.value;
+            var qus13=document.getElementById('quiz').q13.value;
+            var qus14=document.getElementById('quiz').q14.value;
+            var qus15=document.getElementById('quiz').q15.value;
+                                
+            if(qus1=="right"){
+                mark++;
+                corcor1='<div class="row justify-content-center mt-2"><div class="col-12"><div class="card carl" style="color:green;position:relative;"><i style="position:absolute;top:10%;right:10px;" class="fa fa-check"></i>'+try1+'<p class="text-right mr-3 pt-0">Ans:'+ans1+'</p></div></div></div>';}else{
+                    corcor1='<div class="row justify-content-center mt-2"><div class="col-12"><div class="card carl" style="color:#E0574E;position:relative;"><i style="position:absolute;top:10%;right:10px;" class="fa fa-times"></i>'+try1+'<p class="text-right mr-3 pt-0">Ans:'+ans1+'</p></div></div></div>';;
+                };
+            if(qus2=="right"){
+                mark++;
+                corcor2='<div class="row justify-content-center mt-2"><div class="col-12"><div class="card carl" style="color:green;position:relative;"><i style="position:absolute;top:10%;right:10px;" class="fa fa-check"></i>'+try2+'<p class="text-right mr-3 pt-0">Ans:'+ans2+'</p></div></div></div>';}else{
+                    corcor2='<div class="row justify-content-center mt-2"><div class="col-12"><div class="card carl" style="color:#E0574E;position:relative;"><i style="position:absolute;top:10%;right:10px;" class="fa fa-times"></i>'+try2+'<p class="text-right mr-3 pt-0">Ans:'+ans2+'</p></div></div></div>';
+                };
+            if(qus3=="right"){
+                mark++;
+                corcor3='<div class="row justify-content-center mt-2"><div class="col-12"><div class="card carl" style="color:green;position:relative;"><i style="position:absolute;top:10%;right:10px;" class="fa fa-check"></i>'+try3+'<p class="text-right mr-3 pt-0">Ans:'+ans3+'</p></div></div></div>';}else{
+                    corcor3='<div class="row justify-content-center mt-2"><div class="col-12"><div class="card carl" style="color:#E0574E;position:relative;"><i style="position:absolute;top:10%;right:10px;" class="fa fa-times"></i>'+try3+'<p class="text-right mr-3 pt-0">Ans:'+ans3+'</p></div></div></div>';
+                };
+            if(qus4=="right"){
+                mark++;
+                corcor4='<div class="row justify-content-center mt-2"><div class="col-12"><div class="card carl" style="color:green;position:relative;"><i style="position:absolute;top:10%;right:10px;" class="fa fa-check"></i>'+try4+'<p class="text-right mr-3 pt-0">Ans:'+ans4+'</p></div></div></div>';}else{
+                    corcor4='<div class="row justify-content-center mt-2"><div class="col-12"><div class="card carl" style="color:#E0574E;position:relative;"><i style="position:absolute;top:10%;right:10px;" class="fa fa-times"></i>'+try4+'<p class="text-right mr-3 pt-0">Ans:'+ans4+'</p></div></div></div>';
+                };
+            if(qus5=="right"){
+                mark++;
+                corcor5='<div class="row justify-content-center mt-2"><div class="col-12"><div class="card carl" style="color:green;position:relative;"><i style="position:absolute;top:10%;right:10px;" class="fa fa-check"></i>'+try5+'<p class="text-right mr-3 pt-0">Ans:'+ans5+'</p></div></div></div>';}else{
+                    corcor5='<div class="row justify-content-center mt-2"><div class="col-12"><div class="card carl" style="color:#E0574E;position:relative;"><i style="position:absolute;top:10%;right:10px;" class="fa fa-times"></i>'+try5+'<p class="text-right mr-3 pt-0">Ans:'+ans5+'</p></div></div></div>';
+                };
+            if(qus6=="right"){
+                mark++;
+                corcor6='<div class="row justify-content-center mt-2"><div class="col-12"><div class="card carl" style="color:green;position:relative;"><i style="position:absolute;top:10%;right:10px;" class="fa fa-check"></i>'+try6+'<p class="text-right mr-3 pt-0">Ans:'+ans6+'</p></div></div></div>';}else{
+                    corcor6='<div class="row justify-content-center mt-2"><div class="col-12"><div class="card carl" style="color:#E0574E;position:relative;"><i style="position:absolute;top:10%;right:10px;" class="fa fa-times"></i>'+try6+'<p class="text-right mr-3 pt-0">Ans:'+ans6+'</p></div></div></div>';
+                };
+            if(qus7=="right"){
+                mark++;
+                corcor7='<div class="row justify-content-center mt-2"><div class="col-12"><div class="card carl" style="color:green;position:relative;"><i style="position:absolute;top:10%;right:10px;" class="fa fa-check"></i>'+try7+'<p class="text-right mr-3 pt-0">Ans:'+ans7+'</p></div></div></div>';}else{
+                    corcor7='<div class="row justify-content-center mt-2"><div class="col-12"><div class="card carl" style="color:#E0574E;position:relative;"><i style="position:absolute;top:10%;right:10px;" class="fa fa-times"></i>'+try7+'<p class="text-right mr-3 pt-0">Ans:'+ans7+'</p></div></div></div>';
+                };
+            if(qus8=="right"){
+                mark++;
+                corcor8='<div class="row justify-content-center mt-2"><div class="col-12"><div class="card carl" style="color:green;position:relative;"><i style="position:absolute;top:10%;right:10px;" class="fa fa-check"></i>'+try8+'<p class="text-right mr-3 pt-0">Ans:'+ans8+'</p></div></div></div>';}else{
+                    corcor8='<div class="row justify-content-center mt-2"><div class="col-12"><div class="card carl" style="color:#E0574E;position:relative;"><i style="position:absolute;top:10%;right:10px;" class="fa fa-times"></i>'+try8+'<p class="text-right mr-3 pt-0">Ans:'+ans8+'</p></div></div></div>';
+                };
+            if(qus9=="right"){
+                mark++;
+               corcor9='<div class="row justify-content-center mt-2"><div class="col-12"><div class="card carl" style="color:green;position:relative;"><i style="position:absolute;top:10%;right:10px;" class="fa fa-check"></i>'+try9+'<p class="text-right mr-3 pt-0">Ans:'+ans9+'</p></div></div></div>';}else{
+                    corcor9='<div class="row justify-content-center mt-2"><div class="col-12"><div class="card carl" style="color:#E0574E;position:relative;"><i style="position:absolute;top:10%;right:10px;" class="fa fa-times"></i>'+try9+'<p class="text-right mr-3 pt-0">Ans:'+ans9+'</p></div></div></div>';
+                };
+            if(qus10=="right"){
+                mark++;
+                corcor10='<div class="row justify-content-center mt-2"><div class="col-12"><div class="card carl" style="color:green;position:relative;"><i style="position:absolute;top:10%;right:10px;" class="fa fa-check"></i>'+try10+'<p class="text-right mr-3 pt-0">Ans:'+ans10+'</p></div></div></div>';}else{
+                    corcor10='<div class="row justify-content-center mt-2"><div class="col-12"><div class="card carl" style="color:#E0574E;position:relative;"><i style="position:absolute;top:10%;right:10px;" class="fa fa-times"></i>'+try10+'<p class="text-right mr-3 pt-0">Ans:'+ans10+'</p></div></div></div>';
+                };
+            if(qus11=="right"){
+                mark++;
+                corcor11='<div class="row justify-content-center mt-2"><div class="col-12"><div class="card carl" style="color:green;position:relative;"><i style="position:absolute;top:10%;right:10px;" class="fa fa-check"></i>'+try11+'<p class="text-right mr-3 pt-0">Ans:'+ans11+'</p></div></div></div>';}else{
+                    corcor11='<div class="row justify-content-center mt-2"><div class="col-12"><div class="card carl" style="color:#E0574E;position:relative;"><i style="position:absolute;top:10%;right:10px;" class="fa fa-times"></i>'+try11+'<p class="text-right mr-3 pt-0">Ans:'+ans11+'</p></div></div></div>';
+                };
+            if(qus12=="right"){
+                mark++;
+                corcor12='<div class="row justify-content-center mt-2"><div class="col-12"><div class="card carl" style="color:green;position:relative;"><i style="position:absolute;top:10%;right:10px;" class="fa fa-check"></i>'+try12+'<p class="text-right mr-3 pt-0">Ans:'+ans12+'</p></div></div></div>';}else{
+                    corcor12='<div class="row justify-content-center mt-2"><div class="col-12"><div class="card carl" style="color:#E0574E;position:relative;"><i style="position:absolute;top:10%;right:10px;" class="fa fa-times"></i>'+try12+'<p class="text-right mr-3 pt-0">Ans:'+ans12+'</p></div></div></div>';
+                };
+            if(qus13=="right"){
+                mark++;
+                corcor13='<div class="row justify-content-center mt-2"><div class="col-12"><div class="card carl" style="color:green;position:relative;"><i style="position:absolute;top:10%;right:10px;" class="fa fa-check"></i>'+try13+'<p class="text-right mr-3 pt-0">Ans:'+ans13+'</p></div></div></div>';}else{
+                    corcor13='<div class="row justify-content-center mt-2"><div class="col-12"><div class="card carl" style="color:#E0574E;position:relative;"><i style="position:absolute;top:10%;right:10px;" class="fa fa-times"></i>'+try13+'<p class="text-right mr-3 pt-0">Ans:'+ans13+'</p></div></div></div>';
+                };
+            if(qus14=="right"){
+                mark++;
+                corcor14='<div class="row justify-content-center mt-2"><div class="col-12"><div class="card carl" style="color:green;position:relative;"><i style="position:absolute;top:10%;right:10px;" class="fa fa-check"></i>'+try14+'<p class="text-right mr-3 pt-0">Ans:'+ans14+'</p></div></div></div>';}else{
+                    corcor14='<div class="row justify-content-center mt-2"><div class="col-12"><div class="card carl" style="color:#E0574E;position:relative;"><i style="position:absolute;top:10%;right:10px;" class="fa fa-times"></i>'+try14+'<p class="text-right mr-3 pt-0">Ans:'+ans14+'</p></div></div></div>';
+                };
+            if(qus15=="right"){
+                mark++;
+                corcor15='<div class="row justify-content-center mt-2"><div class="col-12"><div class="card carl" style="color:green;position:relative;"><i style="position:absolute;top:10%;right:10px;" class="fa fa-check"></i>'+try15+'<p class="text-right mr-3 pt-0">Ans:'+ans15+'</p></div></div></div>';}else{
+                    corcor15='<div class="row justify-content-center mt-2"><div class="col-12"><div class="card carl" style="color:#E0574E;position:relative;"><i style="position:absolute;top:10%;right:10px;" class="fa fa-times"></i>'+try15+'<p class="text-right mr-3 pt-0">Ans:'+ans15+'</p></div></div></div>';
+                };
+                    
+                     
+                    document.write('<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="ie=edge"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"><title>Study Plan</title><style>body{background-color:#D1DCF6;}.img{background:url("https://wallpaperaccess.com/full/1771974.jpg");background-size:100% 100%;}.carl{border-radius: 10px;box-shadow:-1px 0px 10px -1px;}.row-h1{background:orange;height:250px}.item-h1{border:1px solid #333}.container{width:94%}.a{display:inline;position:relative;padding-top:25px}.cum input{border:0px solid #ddd;border-bottom:2px solid black;appearance:none;padding:10px 10px 3px 10px;background:#FFF;outline:none;width:250px;transition:border-color 1s ease}.place{position:absolute;left:12px;color:#aaa;top:50%;transition:top 0.3s ease, color 0.3s ease, font-size 0.3s ease;transition-delay:background 1s}.cum input:valid +.place, .cum input:focus+.place{top:15%;color:#222;font-size:12px;background:#fff;padding:0px 5px 0px 5px}.cum input:valid, .cum input:focus{border-color:black}.cum input~.focus{position:absolute;bottom:-7px;left:50%;width:0;height:2px;background-color:red;transition:0.3s}.cum input:focus~.focus{width:99%;left:0;transition:0.3s}.card{border-radius:10px} .lab input[type="radio"] {display: none;} .lab label {position: relative;cursor: pointer;font-weight: bold;padding-right: 15px;} .lab label::before {content: "";border: 2px solid #222;display: inline-block;width: 21px;height: 21px;margin: -4px 7px;margin-left: 0;border-radius: 50%;}*****</style></head><body><div class="container"><div class="row justify-content-center pt-3"><div class="col-12"><div class="card img carl"><div class="card-body"><div class="row"><div class="col-6"><h3 class="card-title">Study plan</h3><p class="card-text">বাংলা ব্যাকরণ-02</p></div><div class="col-6"> Total Point <span class="p-1" style="background:#FF0000;color: aliceblue;">'+mark+'/15</span><span class="pl-2 pr-2" style="font-size: 20px;border-radius: 50px;color: aliceblue;width: 100px;margin-left: 10px;background-color:gray;">?</span></div></div></div></div></div></div><div class="row justify-content-center mt-2"><div class="col-12"><div class="card carl"><div class="card-body"><p class="card-text">Name (Facebook Id name)*</p><div class="a"> <label class="cum"> <input type="text" name="name" disabled> <span class="place">Enter Name</span><div class="focus"></div> </label></div></div></div></div></div><div class="row justify-content-center mt-2"><div class="col-12"><div class="card carl"><div class="card-body"><p class="card-text">Your Email (Valid)*</p><div class="a"> <label class="cum"> <input type="text" name="email" disabled> <span class="place">Enter Email</span><div class="focus"></div> </label></div></div></div></div></div><div class="abbu" id="abba">'+corcor1+corcor2+corcor3+corcor4+corcor5+corcor6+corcor7+corcor8+corcor9+corcor10+corcor11+corcor12+corcor13+corcor14+corcor15+'<form class="pt-3" method="post" name="quiz" id="quiz" action="https://formspree.io/f/xeqvznqy"><input style="display:none;" type="email" name="name" value="'+bac+'"><input style="display:none;" type="text" name="-replyto" value="'+abc+'"><input style="display:none;" type="text" name="Points" value="'+mark+'/15"><input class="btn btn-danger btn-block" type="submit" name="" value="Send"></form><div class="row justify-content-center pt-3"><div class="col-9"><p>Never submit passwords through This Forms.</p></div></div><div class="row justify-content-center pt-3"><div class="col-12 text-center"><p>Copyright © 2021  Designed by:<a href="https://www.facebook.com/profile.php?id=100008195567622" class="text-danger"> Shawon Ghosh</a></p></div></div><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"><script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></body></html>');};
+             
+                
+            });
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        var punch=document.getElementById('quiz');
+        
+        var ans1=document.getElementById('right1').innerHTML;
+        var ans2=document.getElementById('right2').innerHTML;
+        var ans3=document.getElementById('right3').innerHTML;
+        var ans4=document.getElementById('right4').innerHTML;
+        var ans5=document.getElementById('right5').innerHTML;
+        var ans6=document.getElementById('right6').innerHTML;
+        var ans7=document.getElementById('right7').innerHTML;
+        var ans8=document.getElementById('right8').innerHTML;
+        var ans9=document.getElementById('right9').innerHTML;
+        var ans10=document.getElementById('right10').innerHTML;
+        var ans11=document.getElementById('right11').innerHTML;
+        var ans12=document.getElementById('right12').innerHTML;
+        var ans13=document.getElementById('right13').innerHTML;
+        var ans14=document.getElementById('right14').innerHTML;
+        var ans15=document.getElementById('right15').innerHTML;
+        
+
+            
+            
+        /*/-----------------------------------------
+        --------------------------------------------*/
+        
+
+    </script>
+    <!-- JS FILES -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
